@@ -30,7 +30,6 @@ const ResumeDownloadButton = () => {
         setTimeout(() => setDownloadStatus("idle"), 3000);
       }
     } catch (error) {
-      console.error("Download error:", error);
       setDownloadStatus("error");
       setTimeout(() => setDownloadStatus("idle"), 3000);
     } finally {

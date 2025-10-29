@@ -29,7 +29,7 @@ const Footer = () => {
           <div className="col-12 text-center">
             <div className="footer-social">
               <a 
-                href="https://github.com/sagardev" 
+                href="https://github.com/sagar-nautiyal" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-light me-3"
@@ -38,7 +38,7 @@ const Footer = () => {
                 <i className="bi bi-github"></i>
               </a>
               <a 
-                href="https://linkedin.com/in/sagardev" 
+                href="https://www.linkedin.com/in/sagar-nautiyal-44967417a/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-light me-3"
@@ -47,7 +47,7 @@ const Footer = () => {
                 <i className="bi bi-linkedin"></i>
               </a>
               <a 
-                href="mailto:sagar.developer@email.com"
+                href="mailto:sagarddn1@gmail.com"
                 className="text-light"
                 title="Email"
               >

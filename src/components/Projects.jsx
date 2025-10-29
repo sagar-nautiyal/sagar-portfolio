@@ -1,11 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
 // ProjectCard Component
 const ProjectCard = ({ project, index, visibleProjects }) => (
-  <div 
-    className={`project-card-wrapper ${project.tier} ${visibleProjects.includes(project.id) ? 'visible' : ''}`}
+  <div
+    className={`project-card-wrapper ${project.tier} ${
+      visibleProjects.includes(project.id) ? "visible" : ""
+    }`}
     data-project-id={project.id}
-    style={{ '--animation-delay': `${index * 0.1}s` }}
+    style={{ "--animation-delay": `${index * 0.1}s` }}
   >
     <article className="project-card">
       {/* Project Header */}
@@ -15,7 +17,9 @@ const ProjectCard = ({ project, index, visibleProjects }) => (
           <span className="project-category">{project.category}</span>
           {project.hasLiveDemo && (
             <div className="project-status">
-              <span className={`status-indicator ${project.status.toLowerCase()}`}>
+              <span
+                className={`status-indicator ${project.status.toLowerCase()}`}
+              >
                 <span className="status-dot"></span>
                 {project.status}
               </span>
@@ -35,7 +39,7 @@ const ProjectCard = ({ project, index, visibleProjects }) => (
       <div className="project-content">
         <h3 className="project-title">{project.title}</h3>
         <p className="project-description">{project.description}</p>
-        
+
         {/* Tech Stack */}
         <div className="tech-stack">
           {project.tech.map((tech, techIndex) => (
@@ -49,21 +53,23 @@ const ProjectCard = ({ project, index, visibleProjects }) => (
       {/* Project Actions */}
       <div className="project-actions">
         {project.hasLiveDemo && (
-          <a 
-            href={project.demo} 
-            target="_blank" 
-            rel="noopener noreferrer" 
+          <a
+            href={project.demo}
+            target="_blank"
+            rel="noopener noreferrer"
             className="project-btn primary"
           >
             <span className="btn-icon">🌐</span>
             <span className="btn-text">Live Demo</span>
           </a>
         )}
-        <a 
-          href={project.github} 
-          target="_blank" 
-          rel="noopener noreferrer" 
-          className={`project-btn ${project.hasLiveDemo ? 'secondary' : 'primary'}`}
+        <a
+          href={project.github}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={`project-btn ${
+            project.hasLiveDemo ? "secondary" : "primary"
+          }`}
         >
           <span className="btn-icon">🐙</span>
           <span className="btn-text">GitHub</span>
@@ -87,110 +93,118 @@ const Projects = () => {
     {
       id: 1,
       title: "SmartLMS",
-      description: "A comprehensive Learning Management System with interactive features, user authentication, course management, and progress tracking for modern education",
+      description:
+        "A comprehensive Learning Management System with interactive features, user authentication, course management, and progress tracking for modern education",
       tech: ["React", "Node.js", "MongoDB", "Express"],
       category: "Full Stack Application",
       status: "Live",
       hasLiveDemo: true,
-      github: "https://github.com/sagardev/smartlms",
+      github: "https://github.com/sagar-nautiyal/smartLMS.git",
       demo: "https://smartlms-demo.vercel.app",
       icon: "🎓",
       tier: "featured",
-      highlight: "🚀 Production Ready"
+      highlight: "🚀 Production Ready",
     },
     {
       id: 2,
       title: "TaskPro",
-      description: "Real-time task management application with WebSocket integration, team collaboration, notifications, and project tracking features",
+      description:
+        "Real-time task management application with WebSocket integration, team collaboration, notifications, and project tracking features",
       tech: ["React", "Node.js", "Socket.io", "MongoDB"],
       category: "Real-Time Web App",
       status: "Live",
       hasLiveDemo: true,
-      github: "https://github.com/sagardev/taskpro",
+      github: "https://github.com/sagar-nautiyal/taskPro.git",
       demo: "https://taskpro-live.herokuapp.com",
       icon: "📋",
       tier: "featured",
-      highlight: "⚡ Real-Time"
+      highlight: "⚡ Real-Time",
     },
     {
       id: 3,
       title: "StoreFleet",
-      description: "Enterprise-grade e-commerce backend API with advanced security, payment integration, inventory management, and RESTful architecture",
+      description:
+        "Enterprise-grade e-commerce backend API with advanced security, payment integration, inventory management, and RESTful architecture",
       tech: ["Node.js", "Express", "MongoDB", "JWT"],
       category: "Backend API",
       status: "Development",
       hasLiveDemo: false,
-      github: "https://github.com/sagardev/storefleet",
+      github: "https://github.com/sagar-nautiyal/storefleet.git",
       icon: "🛒",
       tier: "featured",
-      highlight: "🔐 Enterprise Security"
-    }
+      highlight: "🔐 Enterprise Security",
+    },
   ];
 
   const secondaryProjects = [
     {
       id: 4,
       title: "Easily",
-      description: "Modern job portal platform connecting employers and job seekers with advanced search and matching algorithms",
+      description:
+        "Modern job portal platform connecting employers and job seekers with advanced search and matching algorithms",
       tech: ["React", "Laravel", "MySQL", "Bootstrap"],
       category: "Platform",
       status: "Development",
       hasLiveDemo: false,
-      github: "https://github.com/sagardev/easily",
+      github: "https://github.com/sagar-nautiyal/Easily.git",
       icon: "💼",
-      tier: "secondary"
+      tier: "secondary",
     },
     {
       id: 5,
       title: "PostAway API",
-      description: "Social media backend API with posts, comments, user management, and content moderation features",
+      description:
+        "Social media backend API with posts, comments, user management, and content moderation features",
       tech: ["Node.js", "Express", "MongoDB"],
       category: "Social Media API",
       status: "Development",
       hasLiveDemo: false,
-      github: "https://github.com/sagardev/postaway-api",
+      github: "https://github.com/sagar-nautiyal/POSTAWAY.git",
       icon: "📱",
-      tier: "secondary"
+      tier: "secondary",
     },
     {
       id: 6,
       title: "Expense Tracker",
-      description: "Personal finance management app with real-time analytics, budget tracking, and data visualization",
+      description:
+        "Personal finance management app with real-time analytics, budget tracking, and data visualization",
       tech: ["React", "Firebase", "Bootstrap"],
       category: "Finance App",
       status: "Development",
       hasLiveDemo: false,
-      github: "https://github.com/sagardev/expense-tracker",
+      github: "https://github.com/sagar-nautiyal/Expense-tracker.git",
       icon: "💰",
-      tier: "secondary"
-    }
+      tier: "secondary",
+    },
   ];
 
   const additionalProjects = [
     {
       id: 7,
       title: "BusyBuy",
-      description: "React-based e-commerce demo with shopping cart, product filtering, and checkout flow",
+      description:
+        "React-based e-commerce demo with shopping cart, product filtering, and checkout flow",
       tech: ["React", "Context API", "CSS3"],
       category: "E-commerce Demo",
       status: "Development",
       hasLiveDemo: false,
-      github: "https://github.com/sagardev/busybuy",
+      github: "https://github.com/sagar-nautiyal/BusyBuy.git",
       icon: "🛍️",
-      tier: "additional"
+      tier: "additional",
     },
     {
       id: 8,
       title: "CryptoTracker",
-      description: "Cryptocurrency price tracking application with real-time market data and price alerts",
+      description:
+        "Cryptocurrency price tracking application with real-time market data and price alerts",
       tech: ["HTML5", "CSS3", "JavaScript", "API Integration"],
       category: "Vanilla JS App",
       status: "Development",
       hasLiveDemo: false,
-      github: "https://github.com/sagardev/cryptotracker",
+      github: "https://github.com/sagar-nautiyal/crypto-tracker.git",
       icon: "₿",
-      tier: "additional"
-    }
+      tier: "additional",
+    },
   ];
 
   useEffect(() => {
@@ -199,15 +213,15 @@ const Projects = () => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             const projectId = parseInt(entry.target.dataset.projectId);
-            setVisibleProjects(prev => [...new Set([...prev, projectId])]);
+            setVisibleProjects((prev) => [...new Set([...prev, projectId])]);
           }
         });
       },
       { threshold: 0.1 }
     );
 
-    const projectElements = document.querySelectorAll('.project-card-wrapper');
-    projectElements.forEach(el => observer.observe(el));
+    const projectElements = document.querySelectorAll(".project-card-wrapper");
+    projectElements.forEach((el) => observer.observe(el));
 
     return () => observer.disconnect();
   }, []);
@@ -223,8 +237,9 @@ const Projects = () => {
           </div>
           <h2 className="projects-title">My Projects</h2>
           <p className="projects-subtitle">
-            A comprehensive showcase of my development journey, from enterprise applications 
-            to learning experiments, demonstrating growth in full-stack technologies.
+            A comprehensive showcase of my development journey, from enterprise
+            applications to learning experiments, demonstrating growth in
+            full-stack technologies.
           </p>
         </div>
 
@@ -235,14 +250,16 @@ const Projects = () => {
               <span className="tier-icon">⭐</span>
               Featured Projects
             </h3>
-            <p className="tier-description">My most significant and impactful projects</p>
+            <p className="tier-description">
+              My most significant and impactful projects
+            </p>
           </div>
           <div className="projects-grid featured-grid">
             {featuredProjects.map((project, index) => (
-              <ProjectCard 
-                key={project.id} 
-                project={project} 
-                index={index} 
+              <ProjectCard
+                key={project.id}
+                project={project}
+                index={index}
                 visibleProjects={visibleProjects}
               />
             ))}
@@ -256,14 +273,16 @@ const Projects = () => {
               <span className="tier-icon">🚀</span>
               Core Projects
             </h3>
-            <p className="tier-description">Solid implementations showcasing various technologies</p>
+            <p className="tier-description">
+              Solid implementations showcasing various technologies
+            </p>
           </div>
           <div className="projects-grid secondary-grid">
             {secondaryProjects.map((project, index) => (
-              <ProjectCard 
-                key={project.id} 
-                project={project} 
-                index={index + featuredProjects.length} 
+              <ProjectCard
+                key={project.id}
+                project={project}
+                index={index + featuredProjects.length}
                 visibleProjects={visibleProjects}
               />
             ))}
@@ -277,14 +296,18 @@ const Projects = () => {
               <span className="tier-icon">💡</span>
               Learning Projects
             </h3>
-            <p className="tier-description">Educational builds and experimental implementations</p>
+            <p className="tier-description">
+              Educational builds and experimental implementations
+            </p>
           </div>
           <div className="projects-grid additional-grid">
             {additionalProjects.map((project, index) => (
-              <ProjectCard 
-                key={project.id} 
-                project={project} 
-                index={index + featuredProjects.length + secondaryProjects.length} 
+              <ProjectCard
+                key={project.id}
+                project={project}
+                index={
+                  index + featuredProjects.length + secondaryProjects.length
+                }
                 visibleProjects={visibleProjects}
               />
             ))}
@@ -292,13 +315,15 @@ const Projects = () => {
         </div>
 
         {/* Simplified grid section - delete everything from here until Bottom CTA */}
-        <div style={{display: 'none'}}>
+        <div style={{ display: "none" }}>
           {[].map((project, index) => (
-            <div 
-              key={project.id} 
-              className={`project-card-wrapper ${visibleProjects.includes(project.id) ? 'visible' : ''}`}
+            <div
+              key={project.id}
+              className={`project-card-wrapper ${
+                visibleProjects.includes(project.id) ? "visible" : ""
+              }`}
               data-project-id={project.id}
-              style={{ '--animation-delay': `${index * 0.1}s` }}
+              style={{ "--animation-delay": `${index * 0.1}s` }}
             >
               <article className="project-card">
                 {/* Project Header */}
@@ -308,7 +333,9 @@ const Projects = () => {
                     <span className="project-category">{project.category}</span>
                     {project.hasLiveDemo && (
                       <div className="project-status">
-                        <span className={`status-indicator ${project.status.toLowerCase()}`}>
+                        <span
+                          className={`status-indicator ${project.status.toLowerCase()}`}
+                        >
                           <span className="status-dot"></span>
                           {project.status}
                         </span>
@@ -321,7 +348,7 @@ const Projects = () => {
                 <div className="project-content">
                   <h3 className="project-title">{project.title}</h3>
                   <p className="project-description">{project.description}</p>
-                  
+
                   {/* Tech Stack */}
                   <div className="tech-stack">
                     {project.tech.map((tech, techIndex) => (
@@ -335,21 +362,23 @@ const Projects = () => {
                 {/* Project Actions */}
                 <div className="project-actions">
                   {project.hasLiveDemo && (
-                    <a 
-                      href={project.demo} 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
+                    <a
+                      href={project.demo}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="project-btn primary"
                     >
                       <span className="btn-icon">🌐</span>
                       <span className="btn-text">Live Demo</span>
                     </a>
                   )}
-                  <a 
-                    href={project.github} 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className={`project-btn ${project.hasLiveDemo ? 'secondary' : 'primary'}`}
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`project-btn ${
+                      project.hasLiveDemo ? "secondary" : "primary"
+                    }`}
                   >
                     <span className="btn-icon">�</span>
                     <span className="btn-text">GitHub</span>
