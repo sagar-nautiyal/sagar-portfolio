@@ -78,7 +78,10 @@ const ResumeDownloadButton = () => {
   const handleClick = () => {
     if (downloadStatus === "error") {
       // Redirect to LinkedIn if resume not available
-      window.open("https://www.linkedin.com/in/sagar-nautiyal-44967417a/", "_blank");
+      window.open(
+        "https://www.linkedin.com/in/sagar-nautiyal-44967417a/",
+        "_blank"
+      );
     } else {
       handleDownload();
     }
@@ -163,7 +166,10 @@ const Hero = () => {
                 <div className="row justify-content-center">
                   {techStack.map((tech, index) => (
                     <div key={index} className="col-auto mb-2">
-                      <span className="badge bg-light text-dark p-2" style={{ fontSize: '0.9rem' }}>
+                      <span
+                        className="badge bg-light text-dark p-2"
+                        style={{ fontSize: "0.9rem" }}
+                      >
                         <span className="d-inline-block me-1">{tech.icon}</span>
                         <span>{tech.name}</span>
                       </span>

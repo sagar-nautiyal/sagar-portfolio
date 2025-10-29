@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -9,44 +9,56 @@ const Footer = () => {
         <div className="row align-items-center">
           <div className="col-md-6">
             <p className="mb-0">
-              &copy; {currentYear} <strong>Sagar</strong> - Full Stack Developer. 
-              Built with <i className="bi bi-heart-fill text-danger"></i> using React.js
+              &copy; {currentYear} <strong>Sagar</strong> - Full Stack
+              Developer. Built with{" "}
+              <i className="bi bi-heart-fill text-danger"></i> using React.js
             </p>
           </div>
           <div className="col-md-6 text-md-end">
             <div className="footer-links">
-              <a href="#home" className="text-light text-decoration-none me-3">Home</a>
-              <a href="#about" className="text-light text-decoration-none me-3">About</a>
-              <a href="#projects" className="text-light text-decoration-none me-3">Projects</a>
-              <a href="#contact" className="text-light text-decoration-none">Contact</a>
+              <a href="#home" className="text-light text-decoration-none me-3">
+                Home
+              </a>
+              <a href="#about" className="text-light text-decoration-none me-3">
+                About
+              </a>
+              <a
+                href="#projects"
+                className="text-light text-decoration-none me-3"
+              >
+                Projects
+              </a>
+              <a href="#contact" className="text-light text-decoration-none">
+                Contact
+              </a>
             </div>
           </div>
         </div>
-        
+
         <hr className="my-3 border-secondary" />
-        
+
         <div className="row">
           <div className="col-12 text-center">
             <div className="footer-social">
-              <a 
-                href="https://github.com/sagar-nautiyal" 
-                target="_blank" 
+              <a
+                href="https://github.com/sagar-nautiyal"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="text-light me-3"
                 title="GitHub"
               >
                 <i className="bi bi-github"></i>
               </a>
-              <a 
-                href="https://www.linkedin.com/in/sagar-nautiyal-44967417a/" 
-                target="_blank" 
+              <a
+                href="https://www.linkedin.com/in/sagar-nautiyal-44967417a/"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="text-light me-3"
                 title="LinkedIn"
               >
                 <i className="bi bi-linkedin"></i>
               </a>
-              <a 
+              <a
                 href="mailto:sagarddn1@gmail.com"
                 className="text-light"
                 title="Email"
