@@ -11,12 +11,12 @@ const ResumeDownloadButton = () => {
 
     try {
       // Check if resume file exists
-      const response = await fetch("/resume.pdf", { method: "HEAD" });
+      const response = await fetch("/Sagar_Resume.pdf", { method: "HEAD" });
 
       if (response.ok) {
         // File exists, proceed with download
         const link = document.createElement("a");
-        link.href = "/resume.pdf";
+        link.href = "/Sagar_Resume.pdf";
         link.download = "Sagar_Resume.pdf";
         document.body.appendChild(link);
         link.click();
