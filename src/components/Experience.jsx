@@ -80,7 +80,7 @@ const Experience = () => {
       subtitle: "L2 Data & Voice Support",
       company: "Hexaware Technologies",
       location: "Navi Mumbai",
-      period: "Jun 2021 - July 2023",
+      period: "Jun 2021 - July 2022",
       duration: "1 years",
       type: "Full-time",
       status: "Completed",
